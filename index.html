@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juego de tiro al blanco en HTML5 con JavaScript.">
+    <meta name="google-adsense-account" content="ca-pub-4257989817835828">
+    <title>Juego de Tiro al Blanco</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        header h1, footer p {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #canvas {
+            display: block;
+            margin: 20px auto;
+            background-color: #555;
+            border: 3px solid #fff;
+        }
+        .info {
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        #reiniciar {
+            background-color: #28a745;
+            color: #fff;
+        }
+        #reiniciar:hover {
+            background-color: #218838;
+        }
+        #pausar {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        #pausar:hover {
+            background-color: #c82333;
+        }
+        #mensaje {
+            font-size: 20px;
+            margin: 20px;
+        }
+        section {
+            padding: 20px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Juego de Tiro al Blanco</h1>
+        <nav>
+            <ul>
+                <li><a href="#juego">Juego</a></li>
+                <li><a href="#instrucciones">Instrucciones</a></li>
+                <li><a href="#sobre">Sobre el Juego</a></li>
+                <li><a href="#tecnologias">Tecnologías Usadas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="juego">
+        <canvas id="canvas" width="600" height="400"></canvas>
+        <div class="info">
+            <span id="puntaje">Puntaje: 0</span>
+            <span id="tiempo">Tiempo: 60</span>
+        </div>
+        <div class="info">
+            <button id="reiniciar">Reiniciar</button>
+            <button id="pausar">Pausar</button>
+        </div>
+        <div id="mensaje"></div>
+    </section>
+
+    <section id="instrucciones">
+        <h2>Instrucciones</h2>
+        <ul>
+            <li>Haz clic en el objetivo para ganar puntos.</li>
+            <li>Cada círculo tiene un valor de puntos diferente dependiendo de la precisión de tu disparo.</li>
+            <li>El juego dura 60 segundos, trata de conseguir la mayor cantidad de puntos posibles.</li>
+            <li>Puedes pausar y reanudar el juego en cualquier momento.</li>
+            <li>Ganas si llevas a la cantidad total de 50 puntos.</li>
+        </ul>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre el Juego</h2>
+        <p>El juego de tiro al blanco es una divertida forma de probar tu precisión y rapidez. Fue desarrollado para demostrar cómo se pueden usar las tecnologías HTML5 y JavaScript para crear juegos interactivos. ¡Esperamos que disfrutes jugando tanto como nosotros disfrutamos desarrollándolo!</p>
+    </section>
+
+    <section id="tecnologias">
+        <h2>Tecnologías Usadas</h2>
+        <p>Este juego fue desarrollado utilizando las siguientes tecnologías web:</p>
+        <h3>HTML</h3>
+        <p>HTML (HyperText Markup Language) es el estándar de marcado para crear páginas web. Proporciona la estructura de la página y permite incrustar diferentes tipos de contenido, como texto, imágenes, videos y formularios.</p>
+        <h3>CSS</h3>
+        <p>CSS (Cascading Style Sheets) se utiliza para describir la presentación de una página web. Con CSS, puedes controlar el diseño, los colores, las fuentes y otros aspectos visuales de tu sitio web.</p>
+        <h3>JavaScript</h3>
+        <p>JavaScript es un lenguaje de programación que permite crear contenido interactivo en las páginas web. En este juego, JavaScript se utiliza para manejar la lógica del juego, las interacciones del usuario y la animación del objetivo.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tiro al Blanco. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="juego.js"></script>
+</body>
+</html>
